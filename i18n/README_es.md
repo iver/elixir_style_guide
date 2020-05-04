@@ -7,25 +7,25 @@
   * [Traducciones](#translations)
 * __[Formato](#formato)__
   * [Espacio en blanco](#whitespace)
-  * [Indentation](#indentation)
-  * [Parentheses](#parentheses)
+  * [Identación](#indentation)
+  * [Paréntesis](#parentheses)
   * [Sintaxis](#sintaxis)
-* __[The Guide](#the-guide)__
-  * [Expressions](#expressions)
+* __[La Guía](#the-guide)__
+  * [Expresiones](#expressions)
   * [Nombrado](#nombrado)
   * [Comentarios](#comentarios)
     * [Comentarios de Anotación](#comments-annotations)
   * [Módulos](#modules)
   * [Documentación](#documentation)
   * [Typespecs](#typespecs)
-  * [Structs](#structs)
+  * [Estructuras](#structs)
   * [Excepciones](#excepciones)
   * [Colecciones](#collections)
-  * [Strings](#strings)
-  * _Expresiones Regulares_
-  * [Metaprogramming](#metaprogramming)
-  * [Testing](#testing)
-* __[Resources](#resources)__
+  * [Cadenas](#strings)
+  * _[Expresiones Regulares](#regex)_
+  * [Metaprogramación](#metaprogramming)
+  * [Pruebas](#testing)
+* __[Recursos](#resources)__
   * [Guías de Estilo Alternativas](#alternative-style-guides)
   * [Herramientas](#tools)
 * __[Cómo participar](#getting-involved)__
@@ -328,7 +328,7 @@ pero se proporcionan aquí como ejemplos del estilo preferido.
   String.first(some_string)
   ```
 
-### Sangría o Identación
+### <a name="indentation">Sangría o Identación</a>
 
 * <a name="with-clauses"></a>
   Indentar y alinear las cláusulas `with` sucesivas.
@@ -356,7 +356,7 @@ pero se proporcionan aquí como ejemplos del estilo preferido.
   end
   ```
 
-### Paréntesis
+### <a name="parentheses">Paréntesis</a>
 
 * <a name="parentheses-pipe-operator"></a>
   Usar paréntesis para las funciones de aridad uno `function/1` cuando se usa el
@@ -1268,7 +1268,7 @@ _Por el momento no se han añadido recomendaciones para expresiones regulares._
   Evita la metaprogramación innecesaria.
   <sup>[[enlace](#avoid-metaprogramming)]</sup>
 
-### Testing
+### <a name="testing">Pruebas</a>
 
 * <a name="testing-assert-order"></a>
   Cuando se escriban aserciones con [ExUnit], colocar la expresión que se está
@@ -1356,7 +1356,7 @@ proyecto.
 [Contributors]: https://github.com/christopheradams/elixir_style_guide/graphs/contributors
 [Elixir Style Guide]: https://github.com/christopheradams/elixir_style_guide
 [Elixir]: http://elixir-lang.org
-[Español]: https://github.com/albertoalmagro/elixir_style_guide/blob/spanish/README_esES.md
+[Español]: https://github.com/iver/elixir_style_guide/blob/spanish/i18n/README_es.md
 [ExDoc]: https://github.com/elixir-lang/ex_doc
 [Frances]: https://github.com/ronanboiteau/elixir_style_guide/blob/master/README_frFR.md
 [ExUnit]: https://hexdocs.pm/ex_unit/ExUnit.html
