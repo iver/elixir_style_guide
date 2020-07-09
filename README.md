@@ -8,7 +8,6 @@
   * [Whitespace](#whitespace)
   * [Indentation](#indentation)
   * [Parentheses](#parentheses)
-  * [Syntax](#syntax)
 * __[The Guide](#the-guide)__
   * [Expressions](#expressions)
   * [Naming](#naming)
@@ -811,7 +810,7 @@ generally preferred practice.
   ```
 
 * <a name="module-attribute-ordering"></a>
-  List module attributes and directives in the following order:
+  List module attributes, directives, and macros in the following order:
   <sup>[[link](#module-attribute-ordering)]</sup>
 
   1. `@moduledoc`
@@ -826,6 +825,7 @@ generally preferred practice.
   1. `@callback`
   1. `@macrocallback`
   1. `@optional_callbacks`
+  1. `defmacro`, `defguard`, `def`, etc.
 
   Add a blank line between each grouping, and sort the terms (like module names)
   alphabetically.
@@ -862,7 +862,18 @@ generally preferred practice.
 
     @optional_callbacks macro_name: 1
 
-    ...
+    @doc false
+    defmacro __using__(_opts), do: :no_op
+
+    @doc """
+    Determines when a term is `:ok`. Allowed in guards.
+    """
+    defguard is_ok(term) when term == :ok
+
+    @impl true
+    def init(state), do: {:ok, state}
+
+    # Define other functions here.
   end
   ```
 
@@ -1337,5 +1348,5 @@ project.
 [Portuguese]: https://github.com/gusaiani/elixir_style_guide/blob/master/README_ptBR.md
 [Ruby community style guide]: https://github.com/bbatsov/ruby-style-guide
 [Sentence Spacing]: http://en.wikipedia.org/wiki/Sentence_spacing
-[Spanish]: https://github.com/albertoalmagro/elixir_style_guide/blob/spanish/README_esES.md
+[Spanish]: https://github.com/iver/elixir_style_guide/blob/spanish/i18n/README_es.md
 [Stargazers]: https://github.com/christopheradams/elixir_style_guide/stargazers
