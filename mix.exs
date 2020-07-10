@@ -30,8 +30,9 @@ defmodule ElixirStyleGuide.Mixfile do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.20.1", runtime: false},
-      {:ex_doc_makeup, "~> 0.1.0"}
+      {:ex_doc, ">= 0.18.1", only: :dev},
+      {:ex_doc_makeup, "~> 0.4.0", only: :dev},
+      {:earmark, "~> 1.3.0"}
     ]
   end
 

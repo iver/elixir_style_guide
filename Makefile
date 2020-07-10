@@ -20,4 +20,6 @@ compile:
 
 clean:
 	@echo Cleaning project ...
+	@mix clean --deps
+	@mix deps.clean --all
 	@rm -rf "_build/" "doc/" "deps/"
