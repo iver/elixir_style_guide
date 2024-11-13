@@ -281,22 +281,28 @@ pero se proporcionan aquí como ejemplos del estilo preferido.
   ```
 
 * <a name="multiline-case-clauses"></a>
-  Cuando las cláusulas `case` o `cond` abarcan multiples líneas, separar cada
-  una con una línea en blanco.
+  Si alguna cláusula `case` o `cond` necesita más de una línea (debido a la longitud de la línea, múltiples expresiones en el cuerpo de la cláusula, etc.), utilice la sintaxis de varias líneas para todas las cláusulas y separe cada una con una línea en blanco.
   <sup>[[link](#multiline-case-clauses)]</sup>
 
   ```elixir
-  # no recomendado
+  # no preferido
+  case arg do
+    true -> IO.puts("ok"); :ok
+    false -> :error
+  end
+
+  # no preferido
   case arg do
     true ->
+      IO.puts("ok")
       :ok
-    false ->
-      :error
+    false -> :error
   end
 
   # recomendado
   case arg do
     true ->
+      IO.puts("ok")
       :ok
 
     false ->
