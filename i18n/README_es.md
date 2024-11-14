@@ -636,6 +636,8 @@ una práctica generalmente preferida.
 
 ### Nombrado
 
+Esta guía sigue las [Convenciones de nomenclatura] de la documentación de Elixir, incluido el uso de `snake_case` y `CamelCase` para describir las reglas de mayúsculas y minúsculas.
+
 * <a name="snake-case"></a>
   Usa `snake_case` para atoms, funciones y variables.
   <sup>[[enlace](#snake-case)]</sup>
@@ -880,10 +882,10 @@ una práctica generalmente preferida.
     import Something
     import SomethingElse
 
+    require Integer
+
     alias My.Long.Module.Name
     alias My.Other.Module.Example
-
-    require Integer
 
     @module_attribute :foo
     @other_attribute 100
@@ -1390,6 +1392,7 @@ proyecto.
 [License]: http://creativecommons.org/licenses/by/3.0/deed.en_US
 [mix format]: https://hexdocs.pm/mix/Mix.Tasks.Format.html
 [Module Attributes]: http://elixir-lang.org/getting-started/module-attributes.html#as-annotations
+[Convenciones de nomenclatura]: https://hexdocs.pm/elixir/naming-conventions.html
 [Portugues]: https://github.com/gusaiani/elixir_style_guide/blob/master/README_ptBR.md
 [Ruby community style guide]: https://github.com/bbatsov/ruby-style-guide
 [Sentence Spacing]: http://en.wikipedia.org/wiki/Sentence_spacing
