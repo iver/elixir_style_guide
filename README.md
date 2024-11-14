@@ -829,15 +829,15 @@ generally preferred practice.
   1. `@behaviour`
   1. `use`
   1. `import`
-  1. `alias`
   1. `require`
+  1. `alias`
   1. `@module_attribute`
   1. `defstruct`
   1. `@type`
   1. `@callback`
   1. `@macrocallback`
   1. `@optional_callbacks`
-  1. `defmacro`, `defguard`, `def`, etc.
+  1. `defmacro`, `defmodule`, `defguard`, `def`, etc.
 
   Add a blank line between each grouping, and sort the terms (like module names)
   alphabetically.
@@ -856,10 +856,10 @@ generally preferred practice.
     import Something
     import SomethingElse
 
+    require Integer
+
     alias My.Long.Module.Name
     alias My.Other.Module.Example
-
-    require Integer
 
     @module_attribute :foo
     @other_attribute 100
