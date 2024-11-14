@@ -60,7 +60,7 @@ Las traducciones de la guía están disponibles en los siguientes lenguajes:
 
 * [Chino Simplificado]
 * [Chino Tradicional]
-* [Frances]
+* [French]
 * [Japones]
 * [Coreano]
 * [Portugues]
@@ -500,8 +500,12 @@ una práctica generalmente preferida.
   # no recomendado
   some_string |> String.downcase()
 
+  System.version() |> Version.parse()
+
   # recomendado
   String.downcase(some_string)
+
+  Version.parse(System.version())
   ```
 
 * <a name="bare-variables"></a>
@@ -857,6 +861,7 @@ una práctica generalmente preferida.
   1. `@callback`
   1. `@macrocallback`
   1. `@optional_callbacks`
+  1. `defmacro`, `defguard`, `def`, etc.
 
   Añadir una línea en blanco entre cada grupo, y ordenar alfabéticamente los términos
   (como nombres de módulo).
@@ -893,7 +898,18 @@ una práctica generalmente preferida.
 
     @optional_callbacks macro_name: 1
 
-    ...
+    @doc false
+    defmacro __using__(_opts), do: :no_op
+
+    @doc """
+    Determines when a term is `:ok`. Allowed in guards.
+    """
+    defguard is_ok(term) when term == :ok
+
+    @impl true
+    def init(state), do: {:ok, state}
+
+    # Define other functions here.
   end
   ```
 
@@ -1364,8 +1380,8 @@ proyecto.
 [Elixir]: http://elixir-lang.org
 [Español]: https://github.com/iver/elixir_style_guide/blob/spanish/i18n/README_es.md
 [ExDoc]: https://github.com/elixir-lang/ex_doc
-[Frances]: https://github.com/ronanboiteau/elixir_style_guide/blob/master/README_frFR.md
 [ExUnit]: https://hexdocs.pm/ex_unit/ExUnit.html
+[French]: https://github.com/ronanboiteau/elixir_style_guide/blob/master/README_frFR.md
 [Guard Expressions]: http://elixir-lang.org/getting-started/case-cond-and-if.html#expressions-in-guard-clauses
 [Hex]: https://hex.pm/packages
 [Ingles]: https://github.com/christopheradams/elixir_style_guide/
