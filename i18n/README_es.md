@@ -161,7 +161,7 @@ pero se proporcionan aquí como ejemplos del estilo preferido.
 
 * <a name="defmodule-spacing"></a>
   No dejar líneas en blanco después de `defmodule`.
-  <sup>[[link](#defmodule-spacing)]</sup>
+  <sup>[[enlace](#defmodule-spacing)]</sup>
 
 * <a name="long-dos"></a>
   Si se utiliza la sintaxis `do:` con funciones y la línea que constituye el cuerpo
@@ -236,7 +236,7 @@ pero se proporcionan aquí como ejemplos del estilo preferido.
 * <a name="multiline-enums"></a>
   Si una lista, mapa o estructura abarca varias líneas, colocar cada elemento,
   así como los corchetes de apertura y cierre, en su propia línea.
-  Sangrar cada elemento un nivel, pero no los corchetes.  <sup>[[link](#multiline-enums)]</sup>
+  Sangrar cada elemento un nivel, pero no los corchetes.  <sup>[[enlace](#multiline-enums)]</sup>
 
   ```elixir
   # no recomendado
@@ -282,7 +282,7 @@ pero se proporcionan aquí como ejemplos del estilo preferido.
 
 * <a name="multiline-case-clauses"></a>
   Si alguna cláusula `case` o `cond` necesita más de una línea (debido a la longitud de la línea, múltiples expresiones en el cuerpo de la cláusula, etc.), utilice la sintaxis de varias líneas para todas las cláusulas y separe cada una con una línea en blanco.
-  <sup>[[link](#multiline-case-clauses)]</sup>
+  <sup>[[enlace](#multiline-case-clauses)]</sup>
 
   ```elixir
   # no preferido
@@ -312,7 +312,7 @@ pero se proporcionan aquí como ejemplos del estilo preferido.
 
 * <a name="comments-above-line"></a>
   Colocar los comentarios sobre la línea que se comenta.
-  <sup>[[link](#comments-above-line)]</sup>
+  <sup>[[enlace](#comments-above-line)]</sup>
 
   ```elixir
   String.first(some_string) # no recomendado
@@ -367,7 +367,7 @@ pero se proporcionan aquí como ejemplos del estilo preferido.
 * <a name="parentheses-pipe-operator"></a>
   Usar paréntesis para las funciones de aridad uno `function/1` cuando se usa el
   operador de tubería (pipe) (`|>`).
-  <sup>[[link](#parentheses-pipe-operator)]</sup>
+  <sup>[[enlace](#parentheses-pipe-operator)]</sup>
 
   ```elixir
   # no recomendado
@@ -430,7 +430,7 @@ una práctica generalmente preferida.
 * <a name="single-line-defs"></a>
   Agrupar `def`s de una sola línea que coincidan en nombre de función y respuesta,
   pero separar los `def`s multilinea o no coincidentes con una línea en blanco.
-  <sup>[[link](#single-line-defs)]</sup>
+  <sup>[[enlace](#single-line-defs)]</sup>
 
   ```elixir
   def some_function(nil), do: {:error, "No Value"}
@@ -692,28 +692,26 @@ Esta guía sigue las [Convenciones de nomenclatura] de la documentación de Elix
   end
   ```
 
-* <a name="predicate-macro-names-with-guards"></a>
-  Los nombres de macros predicado (funciones generadas en tiempo de compilación que
-  devuelven un valor booleano) _que pueden ser utilizadas dentro de guards_ deberían
-  prefijarse con `is_`. Para una lista de las expresiones permitidas, ver la
+* <a name="predicate-function-trailing-question-mark"></a>
+  Funciones que regresan un boleano (`true` o `false`) deben ser
+  nombrados con un símbolo de interrogación.
+  <sup>[[enlace](#predicate-function-trailing-question-mark)]</sup>
+
+   ```elixir
+  def cool?(var) do
+    String.contains?(var, "cool")
+  end
+  ```
+
+* <a name="predicate-function-is-prefix"></a>
+  Las comprobaciones boleanas que se pueden utilizar en guardias, deben
+  nombrarse con un prefijo `is_`. Para una lista de las expresiones permitidas, ver la
   documentación de [Guard][Guard Expressions].
-  <sup>[[enlace](#predicate-macro-names-with-guards)]</sup>
+  <sup>[[enlace](#predicate-function-is-prefix)]</sup>
 
   ```elixir
   defguard is_cool(var) when var == "cool"
-  defguardp is_very_cool(var) when var == "very cool"
-  ```
-
-* <a name="predicate-macro-names-no-guards"></a>
-  Los nombres de las funciones predicado _que no pueden ser usadas dentro de guards_
-  deberían de terminar en signo de interrogación (`?`) en lugar de tener un prefijo
-  `is_` (o similar).
-  <sup>[[enlace](#predicate-macro-names-no-guards)]</sup>
-
-  ```elixir
-  def cool?(var) do
-    # Complex check if var is cool not possible in a pure function.
-  end
+  defguard is_very_cool(var) when var == "very cool"
   ```
 
 * <a name="private-functions-with-same-name-as-public"></a>
@@ -750,6 +748,10 @@ Esta guía sigue las [Convenciones de nomenclatura] de la documentación de Elix
   # Ejemplo de capitalización
   # Usa signos de puntuación para frases completas.
   ```
+
+  * <a name="comment-line-length"></a>
+    Limite las líneas de comentarios a 100 caracteres.
+    <sup>[[enlace](#comment-line-length)]</sup>
 
 #### <a name="comments-annotations">Comentarios de Anotación</a>
 
@@ -842,10 +844,6 @@ Esta guía sigue las [Convenciones de nomenclatura] de la documentación de Elix
   defmodule Parser.Core.XMLParser do
   end
   ```
-
-* <a name="module-block-spacing"></a>
-  Dejar una línea en blanco después de cada bloque de código a nivel de módulo.
-  <sup>[[enlace](#module-block-spacing)]</sup>
 
 * <a name="module-attribute-ordering"></a>
   Listar los atributos y directivas del módulo en el siguiente orden:
@@ -1171,7 +1169,7 @@ con las demás directivas (ver [Módulos](#modules)).
 * <a name="multiline-structs"></a>
   Si la definición de una estructura abarca múltiples líneas, poner cada elemento
   en su propia línea, manteniendo los elementos alineados.
-  <sup>[[link](#multiline-structs)]</sup>
+  <sup>[[enlace](#multiline-structs)]</sup>
 
   ```elixir
   defstruct foo: "test",
@@ -1244,7 +1242,7 @@ con las demás directivas (ver [Módulos](#modules)).
 * <a name="map-key-atom"></a>
   Usar la sintaxis abreviada de llave-valor para los mapas cuando todas las
   llaves son átomos.
-  <sup>[[link](#map-key-atom)]</sup>
+  <sup>[[enlace](#map-key-atom)]</sup>
 
   ```elixir
   # no recomendado
@@ -1257,7 +1255,7 @@ con las demás directivas (ver [Módulos](#modules)).
 * <a name="map-key-arrow"></a>
   Usar la sintaxis detallada de llave-valor para los mapas si alguna clave no
   es un átomo.
-  <sup>[[link](#map-key-arrow)]</sup>
+  <sup>[[enlace](#map-key-arrow)]</sup>
 
   ```elixir
   # no recomendado
