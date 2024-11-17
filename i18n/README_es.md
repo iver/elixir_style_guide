@@ -715,16 +715,20 @@ Esta guía sigue las [Convenciones de nomenclatura] de la documentación de Elix
   ```
 
 * <a name="private-functions-with-same-name-as-public"></a>
-  Las funciones privadas que compartan el mismo nombre con alguna función pública
-  deben empezar con `do_`.
+  Las funciones privadas no deben tener el mismo nombre que una función pública`.
+  El patrón `def name` y `defp do_name` ya no se recomienda.
+
+  Usualmente uno puede tratar de encontrar m´ás nombres descriptivos concentrandose en
   <sup>[[enlace](#private-functions-with-same-name-as-public)]</sup>
 
   ```elixir
-  def sum(list), do: do_sum(list, 0)
+  def sum(list), do: sum_total(list, 0)
+
 
   # private functions
-  defp do_sum([], total), do: total
-  defp do_sum([head | tail], total), do: do_sum(tail, head + total)
+  defp sum_total([], total), do: total
+  defp sum_total([head | tail], total), do: sum_total(tail, head + total)
+
   ```
 
 ### Comentarios
