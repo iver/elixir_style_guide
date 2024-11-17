@@ -67,6 +67,7 @@ Las traducciones de la guía están disponibles en los siguientes lenguajes:
 * [Ruso]
 * [Español]
 * [Ingles]
+* [Thai]
 
 ## Formato
 
@@ -1401,3 +1402,4 @@ proyecto.
 [Ruso]: https://github.com/sofialapteva/elixir_style_guide/blob/russian/README_ru.md
 [Sentence Spacing]: http://en.wikipedia.org/wiki/Sentence_spacing
 [Stargazers]: https://github.com/christopheradams/elixir_style_guide/stargazers
+[Thai]: https://github.com/tamectosphere/elixir_style_guide/blob/feat/thai-translation/README_th.md
